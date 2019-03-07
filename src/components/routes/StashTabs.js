@@ -1,17 +1,16 @@
 import React from "react";
-import "./Page2.scss";
-import LeagueLadder from "../LeagueLadder/LeagueLadder";
+import StashTabs from "../StashTabs/StashTabs";
 
 import { Container, Row, Col } from "react-bootstrap";
 
-const Page2 = () => (
+const StashTabsRoute = () => (
   <Container>
     <Row>
       <Col className="">
-        <LeagueLadder />
+        <StashTabs />
       </Col>
     </Row>
   </Container>
 );
 
-export default Page2;
+export default StashTabsRoute;

@@ -18,7 +18,7 @@ const LeagueList = () => {
 
   return (
     <div>
-      {console.log(JSON.stringify(result, "id", 2))}
+      {/* {console.log(JSON.stringify(result, "id", 2))} */}
       <ul>{leagues}</ul>
     </div>
   );

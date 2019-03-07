@@ -3,8 +3,9 @@ import { Navbar, Nav } from "react-bootstrap";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 
-import Home from "../routes/Home";
-import Page2 from "../routes/Page2";
+import LeagueList from "../routes/LeagueList";
+import LeagueLadder from "../routes/LeagueLadder";
+import StashTabs from "../routes/StashTabs";
 
 const MainNav = () => {
   return (
@@ -13,16 +14,21 @@ const MainNav = () => {
         <Navbar bg="light" variant="light">
           <Navbar.Brand>POE Info</Navbar.Brand>
           <Nav className="mr-auto">
-            <LinkContainer to="/">
+            <LinkContainer to="/list">
               <Nav.Link>League Info</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/page2">
+            <LinkContainer to="/ladder">
               <Nav.Link>Ladder</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/stash-tabs">
+              <Nav.Link>Stash Tabs</Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar>
-        <Route exact path="/" component={Home} />
-        <Route path="/page2" component={Page2} />
+        <Route exact path="/" component={LeagueList} />
+        <Route path="/list" component={LeagueList} />
+        <Route path="/ladder" component={LeagueLadder} />
+        <Route path="/stash-tabs" component={StashTabs} />
       </div>
     </Router>
   );

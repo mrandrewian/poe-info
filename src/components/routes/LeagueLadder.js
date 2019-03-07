@@ -1,17 +1,16 @@
 import React from "react";
-import "./Home.scss";
-import LeagueList from "../LeagueList/LeagueList"
+import LeagueLadder from "../LeagueLadder/LeagueLadder";
 
 import { Container, Row, Col } from "react-bootstrap";
 
-const Home = () => (
+const LeagueLadderRoute = () => (
   <Container>
     <Row>
       <Col className="">
-        <LeagueList/>
+        <LeagueLadder />
       </Col>
     </Row>
   </Container>
 );
 
-export default Home;
+export default LeagueLadderRoute;
