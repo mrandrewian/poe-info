@@ -3,7 +3,7 @@ import useFetch from "../utils/useFetch";
 // import _ from "lodash"
 
 const LeagueList = () => {
-  const query = `http://api.pathofexile.com/leagues?type=main`;
+  const query = `https://api.pathofexile.com/leagues?type=main`;
   const result = useFetch(query, []);
   const leagues = result.map(league => (
     <React.Fragment>

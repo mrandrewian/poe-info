@@ -6,6 +6,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import LeagueList from "../routes/LeagueList";
 import LeagueLadder from "../routes/LeagueLadder";
 import StashTabs from "../routes/StashTabs";
+import CharacterInfo from "../routes/CharacterInfo";
 
 const MainNav = () => {
   return (
@@ -14,6 +15,9 @@ const MainNav = () => {
         <Navbar bg="light" variant="light">
           <Navbar.Brand>POE Info</Navbar.Brand>
           <Nav className="mr-auto">
+            <LinkContainer to="/character-info">
+              <Nav.Link>Character Info</Nav.Link>
+            </LinkContainer>
             <LinkContainer to="/list">
               <Nav.Link>League Info</Nav.Link>
             </LinkContainer>
@@ -25,7 +29,8 @@ const MainNav = () => {
             </LinkContainer>
           </Nav>
         </Navbar>
-        <Route exact path="/" component={LeagueList} />
+        <Route exact path="/" component={CharacterInfo} />
+        <Route path="/character-info" component={CharacterInfo} />
         <Route path="/list" component={LeagueList} />
         <Route path="/ladder" component={LeagueLadder} />
         <Route path="/stash-tabs" component={StashTabs} />

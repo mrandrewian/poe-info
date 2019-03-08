@@ -25,7 +25,7 @@ const LeagueLadder = () => {
   const adjustment = max / 100;
   let result = { entries: [] };
   // prettier-ignore
-  const query = `http://api.pathofexile.com/ladders/${i.id}?limit=${i.limit}&offset=${i.offset}&type=${i.type}&track=${i.track}&accountName=${i.accountName}&difficulty=${i.difficulty}&start=${i.start}`;
+  const query = `https://api.pathofexile.com/ladders/${i.id}?limit=${i.limit}&offset=${i.offset}&type=${i.type}&track=${i.track}&accountName=${i.accountName}&difficulty=${i.difficulty}&start=${i.start}`;
   result = useFetch(query, result);
   const leagueLadder = result.entries.map(entry => (
     <React.Fragment key={entry.rank}>

@@ -5,11 +5,11 @@ const useFetch = (url, defaultData, mode = "cors") => {
 
   async function fetchUrl() {
     try {
-      const resp = await fetch(url, {mode: mode});
-      console.log("resp", resp)
+      const resp = await fetch(url, { mode: mode });
+      // console.log("resp", resp);
       const json = await resp.json();
       setData(json);
-    } catch(err) {
+    } catch (err) {
       // catches errors both in fetch and response.json
       console.log(err);
     }
