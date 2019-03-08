@@ -3,14 +3,6 @@ import StashTabs from "../StashTabs/StashTabs";
 
 import { Container, Row, Col } from "react-bootstrap";
 
-const StashTabsRoute = () => (
-  <Container>
-    <Row>
-      <Col className="">
-        <StashTabs />
-      </Col>
-    </Row>
-  </Container>
-);
+const StashTabsRoute = () => <StashTabs />;
 
 export default StashTabsRoute;
